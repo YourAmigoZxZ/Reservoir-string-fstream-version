@@ -1,15 +1,15 @@
 #include "Reservoir.h"
 
-int Reservoir :: surf_compare(const Reservoir& reserv1, const Reservoir& reserv2) const noexcept
+int Reservoir :: surf_compare(const Reservoir& reserv) const noexcept
 {
 	{
-		if (reserv1.check_type(reserv2))
+		if (this->check_type(reserv))
 		{
-			if (reserv1.surface() > reserv2.surface())
+			if (this->surface() > reserv.surface())
 			{
 				return 1;
 			}
-			else if (reserv1.surface() < reserv2.surface())
+			else if (this->surface() < reserv.surface())
 			{
 				return 2;
 			}
